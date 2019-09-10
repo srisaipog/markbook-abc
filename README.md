@@ -22,6 +22,7 @@ GitHub Classroom will create a fork of my [original repository](https://github.c
 ### Test it out
 - Open your repository folder.
 - In the terminal, run `Pytest` and ensure it says it ran two tests.
+<<<<<<< HEAD
 - Pytest installation: pip install -U pytest
 
 ### Group abc
@@ -30,3 +31,11 @@ Members:
 - Sarah Huang
 - Max Naegel
 - Matthew
+=======
+
+### Make some change
+Have each person on the team make a change and push it to GitHub.
+
+
+- Create a GitHub project board with the product backlog items in `product_backlog.md`.
+>>>>>>> 06ee0b5df809dbaf82c64a73f6b98e263c19d5b0
