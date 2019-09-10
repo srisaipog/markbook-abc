@@ -37,7 +37,6 @@ Members:
 <<<<<<< HEAD
 =======
 =======
->>>>>>> 024d5bf74fe89bd24f9abf1bf8cb2a730f09da34
 
 ### Make some change
 Have each person on the team make a change and push it to GitHub.
@@ -46,5 +45,4 @@ Have each person on the team make a change and push it to GitHub.
 - Create a GitHub project board with the product backlog items in `product_backlog.md`.
 <<<<<<< HEAD
 =======
->>>>>>> 06ee0b5df809dbaf82c64a73f6b98e263c19d5b0
->>>>>>> 024d5bf74fe89bd24f9abf1bf8cb2a730f09da34
+
