@@ -25,7 +25,7 @@ GitHub Classroom will create a fork of my [original repository](https://github.c
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
->>>>>>> 024d5bf74fe89bd24f9abf1bf8cb2a730f09da34
+
 - Pytest installation: pip install -U pytest
 
 ### Group abc
