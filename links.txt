@@ -1,0 +1,7 @@
+Here are the links that we might need to use:
+
+https://github.com/ICS4U-Gallo (Classroom)
+https://github.com/srisaipog/markbook-abc (the place where we are working)
+https://github.com/ICS4U-Gallo/markbook-abc (Merge to this when finished project)
+
+
