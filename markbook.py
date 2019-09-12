@@ -25,4 +25,8 @@ def create_classroom(course_code: str, course_name: str, period: int, teacher: s
 
 def calculate_average_mark(student: Dict) -> float:
     """Calculates the average mark of a student"""
+<<<<<<< HEAD
     return 0
+=======
+    return 0
+>>>>>>> cfad894eb23fd28b4006723f6d9c364cffdb1686
