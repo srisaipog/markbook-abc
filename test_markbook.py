@@ -3,7 +3,6 @@ import pytest
 import markbook
 
 
-@pytest.mark.skip
 def test_create_assigment():
     assignment1 = markbook.create_assignment(name="Assignment One",
                                             due="2019-09-21",
@@ -23,7 +22,6 @@ def test_create_assigment():
     assert assignment2["points"] == 1
 
 
-@pytest.mark.skip()
 def test_create_classroom():
     classroom = markbook.create_classroom(course_code="ICS4U",
                                           course_name="Computer Science",
@@ -33,7 +31,10 @@ def test_create_classroom():
         "course_code": "ICS4U",
         "course_name": "Computer Science",
         "period": 2,
-        "teacher": "Mr. Gallo"
+        "teacher": "Mr. Gallo",
+        "student_list": [],
+        'assignment_list': []
+
     }
 
     # The classroom needs to be a dictionary identical to the expected
