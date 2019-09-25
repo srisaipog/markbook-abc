@@ -47,20 +47,20 @@ def test_create_classroom():
 
 
 def test_create_student():
-    student1 = markbook.create_student(first_name = "john", last_name = "smith",gender = "male",student_number = 12324,grade = 12, email = "student@gmail.com",comments = "good job")
-
-    
+    student1 = markbook.create_student(first_name="john", last_name="smith", 
+                                       gender="male", student_number=12324, 
+                                       grade=12, email="student@gmail.com", 
+                                       comments="good job")  
     expected = {
         "first_name":"john",
-        "last_name" : "smith",
+        "last_name": "smith",
         "gender": "male",
         "student_number": 12324,
         "grade": 12,
         "email": "student@gmail.com",
         "marks": [],
-        "comments":"good job"}
+        "comments": "good job"}
     
-
     assert student1 == expected
     assert student1["marks"] == []
     

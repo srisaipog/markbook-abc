@@ -23,7 +23,7 @@ def new_assignment():
             elif value_2 == 2 and value_3 <= 28 and value_3 >= 1:
                 break
             elif value_2 == 3 and value_3 <= 31 and value_3 >= 1:
-                break
+                 break
             elif value_2 == 4 and value_3 <= 30 and value_3 >= 1:
                 break
             elif value_2 == 5 and value_3 <= 31 and value_3 >= 1:
