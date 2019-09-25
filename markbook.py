@@ -28,6 +28,20 @@ def create_classroom(course_code: str, course_name: str, period: int, teacher: s
     }
     return classroom
 
+def create_student(first_name: str, last_name: str,gender: str,student_number:int,grade: int, email: str,comments: str) -> Dict:
+    student = {
+        "first_name":first_name,
+        "last_name" : last_name,
+        "gender": gender,
+        "student_number": student_number,
+        "grade": grade,
+        "email": email,
+        "marks": [],
+        "comments":comments
+    }
+
+    return student
+
 
 def calculate_average_mark(student: Dict) -> float:
     counter = 0

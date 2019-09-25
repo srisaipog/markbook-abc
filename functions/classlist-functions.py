@@ -3,7 +3,7 @@ from typing import Dict
 def create_classroom(course_code: str, course_name: str, period: int, teacher: str) -> Dict:
     classroom = {'Coursecode': course_code,
     'Course name': course_name,
-    'Period': period
+    'Period': period,
     'Teacher': teacher
     }
     """Creates a classroom dictionary"""
