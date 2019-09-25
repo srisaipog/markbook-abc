@@ -28,16 +28,19 @@ def create_classroom(course_code: str, course_name: str, period: int, teacher: s
     }
     return classroom
 
-def create_student(first_name: str, last_name: str,gender: str,student_number:int,grade: int, email: str,comments: str) -> Dict:
+
+def create_student(first_name: str, last_name: str, gender: str,
+                   student_number: int, grade: int, email: str, comments: str) -> Dict:
+    
     student = {
-        "first_name":first_name,
-        "last_name" : last_name,
+        "first_name": first_name,
+        "last_name": last_name,
         "gender": gender,
         "student_number": student_number,
         "grade": grade,
         "email": email,
         "marks": [],
-        "comments":comments
+        "comments": comments
     }
 
     return student
