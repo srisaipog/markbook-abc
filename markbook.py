@@ -55,24 +55,11 @@ def calculate_average_mark(student: Dict) -> float:
 
 
 def add_student_to_classroom(student, classroom):
-    
-    """Adds student to a classroom
-
-    Args:
-        student: Student dict
-        classroom: The classroom to add the student to
-    """
-    pass
+    classroom['student_list'].append(student)
 
 
 def remove_student_from_classroom(student: Dict, classroom: Dict):
-    """Removes student from classroom
-
-    Args:
-        student: The student to be removed
-        classroom: the class from which the student will be removed.
-    """
-    pass
+    classroom['student_list'].remove(student)
 
 
 def edit_student(student: Dict, **kwargs: Dict):

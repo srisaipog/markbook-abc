@@ -72,7 +72,6 @@ def test_calculate_average_mark():
     assert markbook.calculate_average_mark(student) == 75.0
 
 
-@pytest.mark.skip
 def test_add_student_to_classroom():
     """
     Dependencies:
@@ -89,8 +88,6 @@ def test_add_student_to_classroom():
     assert type(classroom["student_list"]) is list
     assert len(classroom["student_list"]) == 1
 
-
-@pytest.mark.skip
 def test_remove_student_from_classroom():
     """
     Dependencies:
