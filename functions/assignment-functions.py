@@ -10,7 +10,9 @@ def new_assignment():
             value_2 = int(input("Enter the month of due date (MM): "))
             if value_2 <= 12 and value_2 >= 1:
                 break
-            
+            else:
+                print("That was not a valid month. Try again.")
+
         except ValueError:
             print("That was not a valid number. Try again.")
 
@@ -23,7 +25,7 @@ def new_assignment():
             elif value_2 == 2 and value_3 <= 28 and value_3 >= 1:
                 break
             elif value_2 == 3 and value_3 <= 31 and value_3 >= 1:
-                 break
+                break
             elif value_2 == 4 and value_3 <= 30 and value_3 >= 1:
                 break
             elif value_2 == 5 and value_3 <= 31 and value_3 >= 1:
@@ -42,6 +44,9 @@ def new_assignment():
                 break
             elif value_2 == 12 and value_3 <= 31 and value_3 >= 1:
                 break
+            else:
+                print("That was not a valid date. Try again.")
+
             
         except ValueError:
             print("That was not a valid date. Try again.")
@@ -51,8 +56,11 @@ def new_assignment():
     while True:
         try:
             value_4 = int(input("Enter the year of due date (YYYY): "))
-            if value_4 >= 2018:
+            if value_4 >= 2019:
                 break
+            else:
+                print("That was not a valid year. Try again.")
+    
         except ValueError:
             print("That was not a valid number. Try again.")
 
