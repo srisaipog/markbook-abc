@@ -76,6 +76,6 @@ def new_assignment():
     all_assignments[key_date] = f"{value_year} - {value_month} - {value_day}"
     all_assignments[key_points] = value_points
 
-    print (all_assignments)
+    return all_assignments
     
 new_assignment()
