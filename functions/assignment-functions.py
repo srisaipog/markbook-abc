@@ -1,14 +1,14 @@
 def new_assignment():
     all_assignments = dict()
     
-    key_1 = 'assignment_title'
-    value_1 = input("Enter the assignment title: ")
+    key_title = 'assignment_title'
+    value_title = input("Enter the assignment title: ")
 
-    key_2 = 'due date month'
+    key_date = 'due date month'
     while True:
         try:
-            value_2 = int(input("Enter the month of due date (MM): "))
-            if value_2 <= 12 and value_2 >= 1:
+            value_month = int(input("Enter the month of due date (MM): "))
+            if value_month <= 12 and value_month >= 1:
                 break
             else:
                 print("That was not a valid month. Try again.")
@@ -19,30 +19,30 @@ def new_assignment():
     key_3 = 'due date day'
     while True:
         try:
-            value_3 = int(input("Enter the day of due date (DD): "))
-            if value_2 == 1 and value_3 <= 31 and value_3 >= 1 :
+            value_day = int(input("Enter the day of due date (DD): "))
+            if value_month == 1 and value_day <= 31 and value_day >= 1 :
                 break
-            elif value_2 == 2 and value_3 <= 28 and value_3 >= 1:
+            elif value_month == 2 and value_day <= 28 and value_day >= 1:
                 break
-            elif value_2 == 3 and value_3 <= 31 and value_3 >= 1:
+            elif value_month == 3 and value_day <= 31 and value_day >= 1:
                 break
-            elif value_2 == 4 and value_3 <= 30 and value_3 >= 1:
+            elif value_month == 4 and value_day <= 30 and value_day >= 1:
                 break
-            elif value_2 == 5 and value_3 <= 31 and value_3 >= 1:
+            elif value_month == 5 and value_day <= 31 and value_day >= 1:
                 break
-            elif value_2 == 6 and value_3 <= 30 and value_3 >= 1:
+            elif value_month == 6 and value_day <= 30 and value_day >= 1:
                 break
-            elif value_2 == 7 and value_3 <= 31 and value_3 >= 1:
+            elif value_month == 7 and value_day <= 31 and value_day >= 1:
                 break
-            elif value_2 == 8 and value_3 <= 31 and value_3 >= 1:
+            elif value_month == 8 and value_day <= 31 and value_day >= 1:
                 break
-            elif value_2 == 9 and value_3 <= 30 and value_3 >= 1:
+            elif value_month == 9 and value_day <= 30 and value_day >= 1:
                 break
-            elif value_2 == 10 and value_3 <= 31 and value_3 >= 1:
+            elif value_month == 10 and value_day <= 31 and value_day >= 1:
                 break
-            elif value_2 == 11 and value_3 <= 30 and value_3 >= 1:
+            elif value_month == 11 and value_day <= 30 and value_day >= 1:
                 break
-            elif value_2 == 12 and value_3 <= 31 and value_3 >= 1:
+            elif value_month == 12 and value_day <= 31 and value_day >= 1:
                 break
             else:
                 print("That was not a valid date. Try again.")
@@ -55,8 +55,8 @@ def new_assignment():
     key_4 = 'due date year'
     while True:
         try:
-            value_4 = int(input("Enter the year of due date (YYYY): "))
-            if value_4 >= 2019:
+            value_year = int(input("Enter the year of due date (YYYY): "))
+            if value_year >= 2019:
                 break
             else:
                 print("That was not a valid year. Try again.")
@@ -64,20 +64,18 @@ def new_assignment():
         except ValueError:
             print("That was not a valid number. Try again.")
 
-    key_5 = 'points'
+    key_points = 'points'
     while True:
         try:
-            value_5 = int(input("Enter how much the assignment is out of: "))
+            value_points = int(input("Enter how much the assignment is out of: "))
             break
         except ValueError:
             print("That was not a valid number. Try again.")
 
-    all_assignments[key_1] = value_1
-    all_assignments[key_2] = value_2
-    all_assignments[key_3] = value_3
-    all_assignments[key_4] = value_4
-    all_assignments[key_5] = value_5
+    all_assignments[key_title] = value_title
+    all_assignments[key_date] = f"{value_year} - {value_month} - {value_day}"
+    all_assignments[key_points] = value_points
 
-    return all_assignments
+    print (all_assignments)
     
 new_assignment()
