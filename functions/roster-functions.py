@@ -1,4 +1,4 @@
-def new_student():
+def create_student():
     students = dict()
 
     key_1 = 'first_name'
@@ -15,7 +15,8 @@ def new_student():
                 break
             else:
                 print("That was not a valid. Try again.")
-                
+               
+            
         except ValueError:
             print("That was not a valid. Try again.")
 
@@ -46,13 +47,21 @@ def new_student():
     key_6 = 'email'
     value_6 = str(input("Enter the student's email: "))
 
+    key_7 = 'marks'
+    value_7 = []
+
+    key_8 = 'comments'
+    value_8 = str(input("Enter any comments for the student: "))
+
     students[key_1] = value_1
     students[key_2] = value_2
     students[key_3] = value_3
     students[key_4] = value_4
     students[key_5] = value_5
     students[key_6] = value_6
+    students[key_7] = value_7
+    students[key_8] = value_8
 
-    print(students)
+    return students
 
-new_student()
+create_student()
