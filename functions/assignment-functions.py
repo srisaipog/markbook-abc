@@ -1,10 +1,11 @@
-def new_assignment():
+def create_assignment():
     all_assignments = dict()
     
     key_title = 'assignment_title'
     value_title = input("Enter the assignment title: ")
 
-    key_date = 'due date month'
+    key_date = 'due date'
+# input month
     while True:
         try:
             value_month = int(input("Enter the month of due date (MM): "))
@@ -16,7 +17,7 @@ def new_assignment():
         except ValueError:
             print("That was not a valid number. Try again.")
 
-    key_3 = 'due date day'
+# input date
     while True:
         try:
             value_day = int(input("Enter the day of due date (DD): "))
@@ -46,13 +47,11 @@ def new_assignment():
                 break
             else:
                 print("That was not a valid date. Try again.")
-
-            
+    
         except ValueError:
             print("That was not a valid date. Try again.")
 
-
-    key_4 = 'due date year'
+# input year
     while True:
         try:
             value_year = int(input("Enter the year of due date (YYYY): "))
@@ -78,4 +77,4 @@ def new_assignment():
 
     return all_assignments
     
-new_assignment()
+create_assignment()
