@@ -1,4 +1,5 @@
 from typing import Dict
+from data import classroom
 
 def new_classroom():
     classroom = dict()
@@ -60,14 +61,23 @@ def add_student_to_classroom(student, classroom):
     """
     pass
 
-def remove_student_from_classroom(student: Dict, classroom: Dict):
-    """Removes student from classroom
+def remove_student_from_classroom():
+    
+    student = input("Please enter the name of the student you wish to remove: ")
+    student_list = classroom["student_list"]
+    student_found = False
 
-    Args:
-        student: The student to be removed
-        classroom: the class from which the student will be removed.
-    """
-    pass
+    for i in range(len(student_list)): 
+      if student in student_list[i]["name"]:
+        del student_list[i] 
+        student_found = True
+        break
+  
+    if student_found == False:
+      print("Student name cannot be found")
+      
+    return classroom
+
 
 def edit_student(student: Dict, **kwargs: Dict):
     """Edits the student's info with the provided key/value pairs
