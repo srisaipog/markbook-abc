@@ -4,4 +4,4 @@ def drop_lowest_mark(student_marks_list):
         if mark < lowest_mark:
             lowest_mark = mark
     student_marks_list.remove(lowest_mark)
-    print(student_marks_list)
+    return student_marks_list
