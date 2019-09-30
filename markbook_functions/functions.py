@@ -93,7 +93,7 @@ def edit_student(student: Dict, **kwargs: Dict):
 
 def create_assignment():
     all_assignments = dict()
-    
+
     key_title = 'assignment_title'
     value_title = input("Enter the assignment title: ")
 
@@ -101,7 +101,7 @@ def create_assignment():
 # input month
     while True:
         try:
-            value_month = int(input("Enter the month of due date (MM) (enter 0 for no due date): "))
+            value_month = int(input("Enter the month of due date (MM),(enter 0 for no due date):"))
             if value_month <= 12 and value_month >= 0:
                 break
             else:
@@ -110,17 +110,16 @@ def create_assignment():
         except ValueError:
             print("That was not a valid number. Try again.")
 
-
     if value_month == 0:
         value_month = None
         value_day = None
         value_year = None
     else:
-# input date
+         # input date
         while True:
             try:
                 value_day = int(input("Enter the day of due date (DD): "))
-                if value_month == 1 and value_day <= 31 and value_day >= 1 :
+                if value_month == 1 and value_day <= 31 and value_day >= 1:
                     break
                 elif value_month == 2 and value_day <= 28 and value_day >= 1:
                     break
@@ -165,21 +164,20 @@ def create_assignment():
     key_points = 'points'
     while True:
         try:
-            value_points = int(input("Enter how much the assignment is out of: "))
+            value_points = int(input("Enter how much the assignment is out of:"))
             break
         except ValueError:
             print("That was not a valid number. Try again.")
 
     all_assignments[key_title] = value_title
-    if value_month == None:
+    if value_month is None:
         all_assignments[key_date] = None
     else:
         all_assignments[key_date] = f"{value_year} - {value_month} - {value_day}"
     all_assignments[key_points] = value_points
 
     return all_assignments
-    
-create_assignment()
+
 
 def drop_lowest_mark(student_marks_list):
     lowest_mark = student_marks_list[0]
