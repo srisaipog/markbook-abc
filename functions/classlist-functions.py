@@ -43,14 +43,15 @@ def new_classroom():
 new_classroom()
 
 
-def create_classroom(course_code: str, course_name: str, period: int, teacher: str) -> Dict:
+def create_classroom(course_code: str, course_name: str, period: int, teacher: str, student_list: list) -> Dict:
     classroom = {'Coursecode': course_code,
     'Course name': course_name,
     'Period': period,
     'Teacher': teacher
+    'Students': student_list
     }
     """Creates a classroom dictionary"""
-    return {}
+    return classroom
 
 def add_student_to_classroom(student, classroom):
     """Adds student to a classroom
@@ -59,7 +60,8 @@ def add_student_to_classroom(student, classroom):
         student: Student dict
         classroom: The classroom to add the student to
     """
-    pass
+    
+    return classroom['students'].append(student)
 
 def remove_student_from_classroom():
     
