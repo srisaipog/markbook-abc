@@ -106,8 +106,6 @@ def test_remove_student_from_classroom():
     assert type(classroom["student_list"]) is list
     assert len(classroom["student_list"]) == 0
 
-
-@pytest.mark.skip
 def test_edit_student():
     student = {"first_name": "John", "last_name": "Smith", "grade": 10}
     markbook.edit_student(student, first_name="Frank", last_name="Bell")
