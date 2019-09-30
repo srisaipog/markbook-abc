@@ -16,7 +16,7 @@ option_functions = [new_classroom(), create_classroom(), add_student_to_classroo
 
 options = {}
 
-for i in range(len(option_functions):
+for i in range(len(option_functions)):
   options[option_letters[i]] = option_functions[i]
 
 while True:
