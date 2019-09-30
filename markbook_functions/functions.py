@@ -265,3 +265,19 @@ def create_student():
     return students
 
 create_student()
+
+def calculate_average_mark(student: Dict) -> float:
+    counter = 0
+    for marks in student.keys():
+        for mark in student[marks]:
+            counter += mark
+    return(counter / len(student[marks]))
+
+
+def edit_student(student: Dict, **kwargs: Dict):
+    for key, value in kwargs.items():
+        student[key] = value
+    return student
+
+
+
