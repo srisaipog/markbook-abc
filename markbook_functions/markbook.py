@@ -20,5 +20,23 @@ for i in range(len(option_functions)):
   options[option_letters[i]] = option_functions[i]
 
 while True:
-  option = input("What option would you like to choose?")
+    to_leave = None
+    option = input("What option would you like to choose? ('done' to exit) ").strip()
+
+    for i in range(len(option_functions)):
+        print(option_letters[i] + ": " + str(option_functions[i])
+
+    if option == "done":
+        break
+    
+    if option in option_letters:
+        if option_letters.index(option) < len(option_functions):
+            to_leave = option_functions[option_letters.index(option)]
+    else:
+        print("Please input a valid option")
+
+    if to_leave != None:
+        with open("data.json", 'a') as u:
+            json.dump(to_leave, u)
+
 
