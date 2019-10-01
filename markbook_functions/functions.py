@@ -56,12 +56,6 @@ def create_classroom(course_code: str, course_name: str, period: int, teacher: s
 
 
 def add_student_to_classroom(student, classroom):
-    """Adds student to a classroom
-    Args:
-        student: Student dict
-        classroom: The classroom to add the student to
-    """
-
     return classroom['students'].append(student)
 
 
