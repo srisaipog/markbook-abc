@@ -1,8 +1,12 @@
 from typing import Dict
 from data import classroom
+import json
 
+with open("app-data.json", "r") as f:
+    data = json.load(f)
 
 def new_classroom():
+    global data
     classroom = dict()
 
     key_1 = "coursecode"
@@ -60,7 +64,7 @@ def add_student_to_classroom(student, classroom):
 
 
 def remove_student_from_classroom():
-
+    global data
     first_name = input("Enter first name of student you wish to remove: ")
     last_name = input("Enter last name of student you wish to remove: ")
     student_list = classroom["student_list"]
@@ -85,6 +89,7 @@ def edit_student(student: Dict, **kwargs: Dict):
 
 
 def create_assignment():
+    global data
     all_assignments = dict()
 
     key_title = 'assignment_title'
@@ -173,6 +178,7 @@ def create_assignment():
 
 
 def drop_lowest_mark(student_marks_list):
+    global data
     lowest_mark = student_marks_list[0]
     for mark in student_marks_list:
         if mark < lowest_mark:
@@ -182,6 +188,7 @@ def drop_lowest_mark(student_marks_list):
 
 
 def average_of_marks(marks_list):
+    global data
     mark_count = 0
     for mark in marks_list:
         global mark_total
@@ -192,6 +199,7 @@ def average_of_marks(marks_list):
 
 
 def create_student():
+    global data
     students = dict()
 
     key_1 = 'first_name'
@@ -268,6 +276,7 @@ def calculate_average_mark(student: Dict) -> float:
 
 
 def edit_student(student: Dict, **kwargs: Dict):
+    global data
     for key, value in kwargs.items():
         student[key] = value
     return student
