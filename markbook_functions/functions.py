@@ -1,6 +1,7 @@
 from typing import Dict
 from data import classroom
 
+
 def new_classroom():
     classroom = dict()
 
@@ -18,7 +19,7 @@ def new_classroom():
                 break
             else:
                 print("That was not a valid answer. Try again")
-        
+
         except ValueError:
             print("That was not a valid answer. Try again")
 
@@ -39,19 +40,20 @@ def new_classroom():
     classroom[key_6] = value_6
 
     return classroom
-    
-new_classroom()
+
+# new_classroom()
 
 
 def create_classroom(course_code: str, course_name: str, period: int, teacher: str, student_list: list) -> Dict:
     classroom = {'Coursecode': course_code,
-    'Course name': course_name,
-    'Period': period,
-    'Teacher': teacher
-    'Students': student_list
-    }
+                 'Course name': course_name,
+                 'Period': period,
+                 'Teacher': teacher
+                 'Students': student_list
+                 }
     """Creates a classroom dictionary"""
     return classroom
+
 
 def add_student_to_classroom(student, classroom):
     """Adds student to a classroom
@@ -59,11 +61,12 @@ def add_student_to_classroom(student, classroom):
         student: Student dict
         classroom: The classroom to add the student to
     """
-    
+
     return classroom['students'].append(student)
 
+
 def remove_student_from_classroom():
-    
+
     first_name = input("Enter first name of student you wish to remove: ")
     last_name = input("Enter last name of student you wish to remove: ")
     student_list = classroom["student_list"]
@@ -77,13 +80,15 @@ def remove_student_from_classroom():
                 break
 
     if student_found is False:
-        print("Student name cannot be found")  
+        print("Student name cannot be found")
     return classroom
+
 
 def edit_student(student: Dict, **kwargs: Dict):
     for key, value in kwargs.items():
         student[key] = value
-    return student"""Edits the student's info with the provided key/value pairs
+    return student"""Edits the student's info with the provided key/value pairs"""
+
 
 def create_assignment():
     all_assignments = dict()
@@ -109,7 +114,7 @@ def create_assignment():
         value_day = None
         value_year = None
     else:
-         # input date
+        # input date
         while True:
             try:
                 value_day = int(input("Enter the day of due date (DD): "))
@@ -139,7 +144,7 @@ def create_assignment():
                     break
                 else:
                     print("That was not a valid date. Try again.")
-        
+
             except ValueError:
                 print("That was not a valid date. Try again.")
 
@@ -151,7 +156,7 @@ def create_assignment():
                     break
                 else:
                     print("That was not a valid year. Try again.")
-        
+
             except ValueError:
                 print("That was not a valid number. Try again.")
 
@@ -181,6 +186,7 @@ def drop_lowest_mark(student_marks_list):
     student_marks_list.remove(lowest_mark)
     return student_marks_list
 
+
 def average_of_marks(marks_list):
     mark_count = 0
     for mark in marks_list:
@@ -190,6 +196,7 @@ def average_of_marks(marks_list):
     mark_average = round(mark_total/mark_count, 1)
     return mark_average
 
+
 def create_student():
     students = dict()
 
@@ -198,7 +205,7 @@ def create_student():
 
     key_2 = 'last_name'
     value_2 = str(input("Enter the student's last name: "))
-    
+
     key_3 = 'gender'
     while True:
         try:
@@ -207,15 +214,14 @@ def create_student():
                 break
             else:
                 print("That was not a valid. Try again.")
-               
-            
+
         except ValueError:
             print("That was not a valid. Try again.")
 
     key_4 = 'student_number'
     while True:
         try:
-            value_4 = int(input("Enter the student's student number: "))            
+            value_4 = int(input("Enter the student's student number: "))
             if value_4 >= 1000000:
                 break
             else:
@@ -258,6 +264,7 @@ def create_student():
 
 create_student()
 
+
 def calculate_average_mark(student: Dict) -> float:
     counter = 0
     for marks in student.keys():
@@ -270,6 +277,3 @@ def edit_student(student: Dict, **kwargs: Dict):
     for key, value in kwargs.items():
         student[key] = value
     return student
-
-
-
