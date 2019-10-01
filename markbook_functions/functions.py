@@ -65,21 +65,23 @@ def add_student_to_classroom(student, classroom):
 
 def remove_student_from_classroom():
     global data
-    first_name = input("Enter first name of student you wish to remove: ")
-    last_name = input("Enter last name of student you wish to remove: ")
     student_list = classroom["student_list"]
     student_found = False
 
-    for i in range(len(student_list)):
-        if first_name in student_list[i]["first_name"]:
-            if last_name in student_list[i]["last_name"]:
-                del student_list[i]
-                student_found = True
-                break
+    while student_found == False:
+        try:
+            first_name = input("Enter first name of student you wish to remove: ")
+            last_name = input("Enter last name of student you wish to remove: ")
+            for i in range(len(student_list)):
+                if first_name in student_list[i]["first_name"] and last_name in student_list[i]["last_name"]:
+                    del student_list[i]
+                    student_found = True
+                    break   
+        except KeyError:       
+            print("student name cannot be found\n")
+            student_found == False 
 
-    if student_found is False:
-        print("Student name cannot be found")
-    return classroom
+     return classroom
 
 
 def edit_student(student: Dict, **kwargs: Dict):
