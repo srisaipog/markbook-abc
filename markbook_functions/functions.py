@@ -286,3 +286,19 @@ def edit_student(student: Dict, **kwargs: Dict):
 def save(new_data):
     with open('data.json', 'w') as f:
         json.dump(new_data, f)
+
+        
+def report_card(students):
+  first_name = input("first name: ")
+  last_name = input("last name: ")
+
+  for i in range(len(students)):
+      if first_name in students[i]["first_name"] and last_name in students[i]["last_name"]:
+        print("student: {0}{01:>6}".format(students[i]["first_name"],students[i]["last_name"]))
+        print("gender: {0}".format(students[i]["gender"]))
+        print("student number: {0}". format(students[i]["student_number"]))
+        print("comments: {0}".format(students[i]["comments"]))
+        print("-----------------------------------")
+      for i in range(len(students[i]["marks"])):
+        print("course {0}: {01:>6}".format(i+1,students[i]["marks"][i]))
+      break
