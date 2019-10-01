@@ -36,5 +36,8 @@ while True:
         print("Please input a valid option")
 
     if to_leave is not None:
-        with open("data.json", 'a') as u:
+        with open("data.json", 'w') as u:
             json.dump(to_leave, u)
+    else to_leave is None:
+        with open("data.json", 'r') as v:
+            json.load(to_leave, v)
