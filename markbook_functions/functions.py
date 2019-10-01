@@ -277,3 +277,7 @@ def edit_student(student: Dict, **kwargs: Dict):
     for key, value in kwargs.items():
         student[key] = value
     return student
+
+def save(new_data):
+    with open('data.json', 'w') as f:
+        json.dump(new_data, f)
