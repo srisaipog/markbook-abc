@@ -5,8 +5,8 @@ import markbook
 
 def test_create_assigment():
     assignment1 = markbook.create_assignment(name="Assignment One",
-                                            due="2019-09-21",
-                                            points=100)
+                                             due="2019-09-21",
+                                             points=100)
     expected = {
         "name": "Assignment One",
         "due": "2019-09-21",
@@ -47,12 +47,12 @@ def test_create_classroom():
 
 
 def test_create_student():
-    student1 = markbook.create_student(first_name="john", last_name="smith", 
-                                       gender="male", student_number=12324, 
-                                       grade=12, email="student@gmail.com", 
-                                       comments="good job")  
+    student1 = markbook.create_student(first_name="john", last_name="smith",
+                                       gender="male", student_number=12324,
+                                       grade=12, email="student@gmail.com",
+                                       comments="good job")
     expected = {
-        "first_name":"john",
+        "first_name": "john",
         "last_name": "smith",
         "gender": "male",
         "student_number": 12324,
@@ -60,10 +60,10 @@ def test_create_student():
         "email": "student@gmail.com",
         "marks": [],
         "comments": "good job"}
-    
+
     assert student1 == expected
     assert student1["marks"] == []
-    
+
 
 def test_calculate_average_mark():
     student = {
@@ -87,6 +87,7 @@ def test_add_student_to_classroom():
     markbook.add_student_to_classroom(student, classroom)
     assert type(classroom["student_list"]) is list
     assert len(classroom["student_list"]) == 1
+
 
 def test_remove_student_from_classroom():
     """
