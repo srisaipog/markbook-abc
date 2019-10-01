@@ -76,7 +76,7 @@ def remove_student_from_classroom():
         if first_name in student_list[i]["first_name"]:
             if last_name in student_list[i]["last_name"]:
                 del student_list[i]
-                student_foud = True
+                student_found = True
                 break
 
     if student_found is False:
